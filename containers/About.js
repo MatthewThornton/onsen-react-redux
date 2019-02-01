@@ -27,7 +27,7 @@ export default class About extends React.Component {
          */
         const canvasString = `<canvas-container class="tiles" target="problem.algebraTiles"> <canvas width="800" height="300" style="width: 400px; height: 150px;"></canvas></canvas-container>`;
         // This would be the template string from the problem payload (problem-vault)
-        const mathJax = `<div class="problemEquation">\[↵  r^{3} \cdot r^{4}↵\]</div>`;
+        const mathJax = `<div class="problemEquation">\[  r^{3} \cdot r^{4} \]</div>`;
         const html =
             `<div>Example HTML string from problem-vault</div> <p>Here is a MathJax String:</p> ${mathJax} <p>Here is a canvas-container element. </p>${canvasString} `;
         const options = {
