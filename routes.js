@@ -2,6 +2,11 @@ import React from "react";
 import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
 import App from "./containers/App";
 import About from "./containers/About";
+
+function refreshPage() {
+    window.location.reload();
+}
+
 export default () => {
     return (
         <BrowserRouter>

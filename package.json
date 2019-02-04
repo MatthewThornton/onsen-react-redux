@@ -1,7 +1,7 @@
 {
-  "name": "react-redux-onsen",
+  "name": "react-redux",
   "version": "1.0.0",
-  "description": "The ideal react seed",
+  "description": "React Playground",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -28,8 +28,12 @@
     ]
   },
   "dependencies": {
+    "babel-polyfill": "^6.23.0",
+    "canvas": "^1.6.5",
+    "html-loader": "^0.5.5",
     "css-loader": "^0.28.5",
     "less-loader": "^4.0.5",
+    "lodash": "4.17.5",
     "mathjax": "^2.6.1",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
