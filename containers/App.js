@@ -5,7 +5,7 @@ import { setMessage } from "../actions/message";
 import { Link } from "react-router-dom";
 
 class App extends Component {
-    _onChange = (value) => {
+    _onChange(value) {
         this.props.dispatch(setMessage(value))
     }
     render() {
