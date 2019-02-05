@@ -17,8 +17,8 @@ class App extends Component {
                     value={message}
                     onChange={this._onChange} 
                 />
-                <Link to="/about">
-                    <button>Go to About</button>
+                <Link to="/problem">
+                    <button>View Problem</button>
                 </Link>
             </div>
         )

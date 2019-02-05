@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/manojsinghnegiwd/idealreactseed.git"
+    "url": ""
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/manojsinghnegiwd/idealreactseed/issues"
+    "url": ""
   },
-  "homepage": "https://github.com/manojsinghnegiwd/idealreactseed#readme",
+  "homepage": "",
   "babel": {
     "presets": [
       "es2015",
@@ -30,8 +30,8 @@
   "dependencies": {
     "babel-polyfill": "^6.23.0",
     "canvas": "^1.6.5",
-    "html-loader": "^0.5.5",
     "css-loader": "^0.28.5",
+    "html-loader": "^0.5.5",
     "less-loader": "^4.0.5",
     "lodash": "4.17.5",
     "mathjax": "^2.6.1",
