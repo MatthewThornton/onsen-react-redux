@@ -1,5 +1,7 @@
 import * as React from "react";
-// const MathJax = require("react-mathjax");
+// import MathJax from "react-mathjax";
+// import { Provider} from "../../node_modules/react-mathjax/lib/Provider";
+console.log("Import: ", require("react-mathjax"));
 const tex = `3x = 12`
 
 const OneStep = ({ }) => (
