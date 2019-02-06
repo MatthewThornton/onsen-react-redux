@@ -14,6 +14,7 @@ export function createOneStepProblem(options = {}) {
         xVal: settings.xVal,
         xVar: settings.xVar,
         term: settings.term,
+        rhs: settings.xVal + settings.term,
         equation: `${settings.xVar} + ${settings.term} = ${settings.xVal + settings.term}`
     }
 }

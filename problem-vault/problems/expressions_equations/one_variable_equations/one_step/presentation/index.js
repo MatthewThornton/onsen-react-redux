@@ -2,6 +2,11 @@ import React from "react";
 import * as PropTypes from "prop-types";
 import Presenter from "./presenter";
 
+/**
+ * This is where the problem formating would occur. 
+ * IE: printing, fixing decimals, currency ect.
+ * In this simple example no formatting is necessary
+ */
 const Presentation = ({
     problemGenerator // type check the generator.
 }) => {
