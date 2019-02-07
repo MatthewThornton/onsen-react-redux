@@ -16,7 +16,7 @@ export default class ProblemView extends React.Component {
         const problem = spoolProblem(level);
         /**
          * The problem state controls whether you see the presentation or feedback view.
-         * In this simple example state in the problem lifecycle has not be established.
+         * In this simple example state in the problem life cycle has not be established.
         */
         const stupidState = "problem"; // problem || feedback
         if (stupidState === "problem") {
@@ -24,9 +24,6 @@ export default class ProblemView extends React.Component {
                 <div>
                     <Presentation problem={problem} />
                     <AnswerInput answer={problem.answer} />
-                    <Link to="/">
-                        <button>Go Home</button>
-                    </Link>
                 </div>
             )
         } else if (stupidState === "feedback") {
