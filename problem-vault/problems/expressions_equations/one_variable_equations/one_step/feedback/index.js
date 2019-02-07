@@ -1,32 +1,20 @@
 import React from "react";
 import * as PropTypes from "prop-types";
-import Solver from "./solver";
-
+import Solver from "../../../../../solvers/expressions_equations/one_variable_equations/Solver";
 /**
- * This is where the feedback formating would occur. 
- * IE: printing, fixing decimals, currency ect.
- * Likely an external "solver" would be called to get the formatted objects.
- * In this simple example no formatting is necessary
+ * Stitch the correct feedback template to the problem.
+ * The problem solver and the generator are typed so everything should match.
  */
 const Feedback = ({
-    problemGenerator // type check the generator.
+    problem // IProblem
 }) => {
-    const {xVar, xVal, term, rhs } = problemGenerator;
-
-    // These objects could come from an common solver function.
-    const subtract = `\\class{red}{ - ${term}}`;
-    const step1 = `${xVar} + ${term} ${subtract} = ${rhs} ${subtract}`;
-    const solution = `${xVar} = ${xVal}`;
-
     return (
       <Solver
-        term={term} //Wrap in a decimal function.
-        step1={step1}
-        solution={solution}
+        solver={problem.solver}
       />
     );
 }
 Feedback.propTypes = {
-    problemGenerator: PropTypes.any.isRequired
+    problem: PropTypes.any.isRequired
 }
 export default Feedback;

@@ -17,7 +17,7 @@ class App extends Component {
                     value={message}
                     onChange={this._onChange} 
                 />
-                <Link to="/problem">
+                <Link to="/problem_view">
                     <button>Go to Problem</button>
                 </Link>
             </div>

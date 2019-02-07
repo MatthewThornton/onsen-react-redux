@@ -1,6 +1,6 @@
 import React from "react";
 import * as PropTypes from "prop-types";
-import Presenter from "./presenter";
+import Presenter from "../../common_presentation/Presenter";
 
 /**
  * This is where the problem formating would occur. 
@@ -8,15 +8,14 @@ import Presenter from "./presenter";
  * In this simple example no formatting is necessary
  */
 const Presentation = ({
-    problemGenerator // type check the generator.
+    problem 
 }) => {
     //  We could make a presenter selection based on the generator.
     return <Presenter 
-        xVar={problemGenerator.xVar} 
-        equation={problemGenerator.equation}
+       presenter={problem.presenter}
     />;
 }
 Presentation.propTypes = {
-    problemGenerator: PropTypes.any.isRequired
+    problem: PropTypes.any.isRequired
 }
 export default Presentation;
