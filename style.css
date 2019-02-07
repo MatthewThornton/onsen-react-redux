@@ -1,5 +1,16 @@
+html {
+  font-size: 62.5%; 
+}
+body {
+  font-size: 1.5em;
+  line-height: 1.6;
+  font-weight: 400;
+  font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #222; 
+}
+
 .problemEquation {
-  font-size: 24px;
+  font-size: 1.6em;
   text-align: center;
   padding-top: 2vh;
   padding-bottom: 2vh;
@@ -10,9 +21,9 @@
 }
 
 .feedbackArea {
-  padding: 18px 20px;
+  padding: 1.5em 1.5em;
   border-style: solid;
   border-width: 1px;
   border-color: #269017;
-  min-height: 120px;
+  min-height: 8em;
 }
