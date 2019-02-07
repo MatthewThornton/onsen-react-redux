@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import AnswerInput from "../components/AnswerInput";
+import AnswerPresentation from "../components/AnswerPresentation";
 /**
  * Currently the path is given in the curriculums package. IE: 'expressions_equations/one_variable_equations/one_step'
  * The presentation and feedback react components would be in the same relative location. IE: /presentation or /feedback
@@ -15,23 +16,28 @@ export default class ProblemView extends React.Component {
         const problem = spoolProblem(level);
         /**
          * The problem state controls whether you see the presentation or feedback view.
-         * In this simple example both are being displayed. 
+         * In this simple example state in the problem lifecycle has not be established.
         */
-        return (
-          <div>
-            <Presentation problem={problem} />
-
-            <div className="feedbackArea">
-                <p> The correct answer is {problem.answer}.</p>
-            </div>
-            <h3>Let's walk through the problem</h3>
-            <Presentation problem={problem} />
-            <Feedback problem={problem} />
-
-            <Link to="/">
-              <button>Go Home</button>
-            </Link>
-          </div>
-        );
+        const stupidState = "problem"; // problem || feedback
+        if (stupidState === "problem") {
+            return (
+                <div>
+                    <Presentation problem={problem} />
+                    <AnswerInput answer={problem.answer} />
+                    <Link to="/">
+                        <button>Go Home</button>
+                    </Link>
+                </div>
+            )
+        } else if (stupidState === "feedback") {
+            return (
+                <div>
+                    <AnswerPresentation answer={problem.answer} />
+                    <h3>Let's walk through the problem</h3>
+                    <Presentation problem={problem} />
+                    <Feedback problem={problem} />
+                </div>
+            )
+        }
     }
 }
