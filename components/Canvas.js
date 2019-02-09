@@ -2,10 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 import * as PropTypes from "prop-types";
 
+/**
+ * This component will scale to size based on a CSS class name.
+ * The device-to-pixel-ratio (dpr) is used to draw final "relative" size.
+ */
 class Canvas extends React.Component {
-
     componentDidMount() {
-
         const canvas = this.refs.canvas
         // Get dpr and screen dimensions from css
         const dpr = window.devicePixelRatio || 1; // dpr
