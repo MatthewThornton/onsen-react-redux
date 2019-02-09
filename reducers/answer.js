@@ -1,6 +1,8 @@
 import { SET_ANSWER } from "../types/answer";
 const initState = {
-    answer: "42"
+    answer: "42",
+    message: "",
+    context: null
 }
 export default (state = initState, action) => {
     switch (action.type) {

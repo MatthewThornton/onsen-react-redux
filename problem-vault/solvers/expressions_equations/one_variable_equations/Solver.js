@@ -4,7 +4,7 @@ import MathJax from "react-mathjax";
 import * as PropTypes from "prop-types";
 
 /**
- * This would a "smart" solver hat could detect from the
+ * This would be a "smart" solver that could detect from the
  * feedbackSolver object how to format the template.
  */
 const Solver = ({

@@ -17,8 +17,13 @@ class App extends Component {
                     value={message}
                     onChange={this._onChange} 
                 />
-                <Link to="/problem_view">
-                    <button>Go to Problem</button>
+                <h2>One Variable Equations</h2>
+                <Link to="/one_step">
+                    <button>One Step Equations</button>
+                </Link>
+                <h2>Geometry</h2>
+                <Link to="/circle_area">
+                    <button>Circle Area</button>
                 </Link>
             </div>
         )
