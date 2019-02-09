@@ -6,7 +6,7 @@ import spoolProblem from "../../../problem-vault/problems/geometry/circles/area"
 import Presentation from "../../../problem-vault/problems/geometry/circles/area/presentation";
 import Canvas from "../../../components/Canvas";
 
-export default class OneStep extends React.Component {
+export default class CircleArea extends React.Component {
   render() {
     const level = 1; // Level would be controlled by the state.
     const problem = spoolProblem(level);
@@ -17,7 +17,9 @@ export default class OneStep extends React.Component {
     return (
       <div>
         <Presentation problem={problem} />
-        <Canvas  />
+        <Canvas  
+            className={"small"}
+        />
        
         <AnswerPresentation answer={problem.answer} />
 
