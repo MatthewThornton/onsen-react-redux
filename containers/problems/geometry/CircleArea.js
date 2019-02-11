@@ -18,11 +18,14 @@ export default class CircleArea extends React.Component {
       <div>
         <Presentation problem={problem} />
         <Canvas  
-            className={"small"}
+          className={"small"}
+          draw={ctx => {
+            ctx.beginPath();
+            ctx.arc(95, 50, 40, 0, 2 * Math.PI);
+            ctx.stroke();
+          }}
         />
-       
         <AnswerPresentation answer={problem.answer} />
-
       </div>
     );
   }
