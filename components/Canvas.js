@@ -16,10 +16,6 @@ class Canvas extends React.Component {
         canvas.width = rect.width * dpr;
         canvas.height = rect.height * dpr;
         const ctx = canvas.getContext('2d');
-        ctx.scale(dpr, dpr);
-        ctx.beginPath();
-        ctx.arc(95, 50, 40, 0, 2 * Math.PI);
-        ctx.stroke();
         this.props.draw(ctx);
     }
     render() {
