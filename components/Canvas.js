@@ -25,7 +25,7 @@ class Canvas extends React.Component {
     }
 }
 Canvas.propTypes = {
-  className: PropTypes.string.isRequired,
+  className: PropTypes.string,
   draw: PropTypes.func.isRequired
 };
 export default Canvas

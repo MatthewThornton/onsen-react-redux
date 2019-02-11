@@ -21,7 +21,6 @@ export default class CircleArea extends React.Component {
         <h1>Feedback Test</h1>
         <p>Making sure that multiple canvas contexts render correctly. This canvas drawing is on the feedback context.</p>
         <Canvas
-          className={"medium"}
           draw={problem.solver.house}
         />
       </div>
