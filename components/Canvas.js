@@ -8,19 +8,22 @@ import * as PropTypes from "prop-types";
  */
 
 class Canvas extends React.Component {
+    constructor() {
+        super()
+        this.canvas = React.createRef()
+    }
     componentDidMount() {
-        const canvas = this.refs.canvas
         // Get dpr and screen dimensions from css
         const dpr = window.devicePixelRatio || 1; // dpr
-        const rect = canvas.getBoundingClientRect(); // css
-        canvas.width = rect.width * dpr;
-        canvas.height = rect.height * dpr;
-        const ctx = canvas.getContext('2d');
+        const rect = this.canvas.current.getBoundingClientRect(); // css
+        this.canvas.current.width = rect.width * dpr;
+        this.canvas.current.height = rect.height * dpr;
+        const ctx = this.canvas.current.getContext('2d');
         this.props.draw(ctx);
     }
     render() {
         // The CSS class name controls the size of the canvas drawing.
-        return <canvas className={this.props.className ? this.props.className : 'medium'} ref="canvas" />;    
+        return <canvas className={this.props.className ? this.props.className : 'medium'} ref={this.canvas} />;    
        
     }
 }
