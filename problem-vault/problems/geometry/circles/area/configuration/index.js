@@ -10,7 +10,12 @@ import { createProblem } from "./createProblem";
 const problemGenerator = {
     xVar: "r",
     radius: 5,
-    area: 5 * 5 * 3.14
+    area: 5 * 5 * 3.14,
+    circle: ctx => {
+        ctx.beginPath();
+        ctx.arc(95, 50, 40, 0, 2 * Math.PI);
+        ctx.stroke();
+    }
 }
 
 /**

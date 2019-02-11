@@ -10,20 +10,12 @@ export default class CircleArea extends React.Component {
   render() {
     const level = 1; // Level would be controlled by the state.
     const problem = spoolProblem(level);
-    /**
-     * The problem state controls whether you see the presentation or feedback view.
-     * In this simple example state in the problem life cycle has not been established.
-     */
     return (
       <div>
         <Presentation problem={problem} />
         <Canvas  
           className={"small"}
-          draw={ctx => {
-            ctx.beginPath();
-            ctx.arc(95, 50, 40, 0, 2 * Math.PI);
-            ctx.stroke();
-          }}
+          draw={problem.generator.circle}
         />
         <AnswerPresentation answer={problem.answer} />
       </div>
