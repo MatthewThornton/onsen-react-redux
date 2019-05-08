@@ -1,1 +1,1 @@
-# react-onsenui-redux
+# react-redux

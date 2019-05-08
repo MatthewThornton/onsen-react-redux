@@ -6,7 +6,6 @@ import * as PropTypes from "prop-types";
  * This component will scale to size based on a CSS class name.
  * The device-to-pixel-ratio (dpr) is used to draw final "relative" size.
  */
-
 class Canvas extends React.Component {
     constructor() {
         super()
@@ -23,8 +22,7 @@ class Canvas extends React.Component {
     }
     render() {
         // The CSS class name controls the size of the canvas drawing.
-        return <canvas className={this.props.className ? this.props.className : 'medium'} ref={this.canvas} />;    
-       
+        return <canvas className={this.props.className ? this.props.className : 'medium'} ref={this.canvas} />;         
     }
 }
 Canvas.propTypes = {
